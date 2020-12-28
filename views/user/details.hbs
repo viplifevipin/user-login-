@@ -1,0 +1,12 @@
+
+<div class="row">
+    <a class="btn btn-primary" href="/logout">logout</a></div>
+    <div class="container col-md-4 col-md-offset-4">
+        <h1>Admin page</h1>
+        {{#each doc}}
+            <span class="d-block p-2 bg-primary text-white">mail:{{this.email}}</span>
+            <span class="d-block p-2 bg-dark text-white">Full name:{{this.name}}</span>
+            <span class="d-block p-2 bg-dark text-white">role:-{{this.role}}</span>
+        {{/each}}
+    </div>
+</div>

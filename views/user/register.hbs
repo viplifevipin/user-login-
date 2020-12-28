@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="container col-md-4 col-md-offset-3 ">
+        <h1>Register</h1>
+        {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{#each messages}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <form action="/register" method="post" >
+
+            <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" class="form-control">
+
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" class="form-control">
+
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="role">
+                        <option selected>Choose...</option>
+                        <option value="user">user</option>
+                        <option value="admin">admin</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign In</button>
+            <p>Don't have an account? <a class="" href="/register">Register</a> </p>
+        </form>
+    </div>
+</div>
